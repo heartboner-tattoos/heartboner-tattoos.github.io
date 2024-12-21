@@ -15,6 +15,7 @@ header {
     position: relative;
     padding: 20px;
     background-color: #ffb3b3; /* Pastel pink */
+	flex-wrap: wrap;
 }
 
 header h1 {
@@ -25,10 +26,23 @@ header h1 {
 }
 
 .header-right {
-    position: absolute;
+    /*position: absolute;
     top: 20px;
-    right: 20px;
+    right: 20px;*/
+	display: flex;      /* NEW: So that the language toggle & icons stay in one line */
+    align-items: center;/* NEW */
+    gap: 10px;          /* NEW: Space between language toggle and icons */
+    margin-left: auto;  /* NEW: Push it to the right side */
 }
+
+.language-toggle {
+	/* Optional: style for the language toggle */
+}
+
+.language-link {
+	font-size: 0.9em;
+	text-decoration: none;
+  }
 
 .social-icons {
     list-style: none;
@@ -95,9 +109,13 @@ main {
 }
 
 .gallery-image {
-    width: 500px;
+    /*width: 500px;
     height: 500px;
-    object-fit: cover;
+    object-fit: cover;*/
+	width: 100%;         /* NEW: full width inside its container */
+    max-width: 500px;    /* NEW: limit max width to 500px if you want */
+    height: auto;        /* NEW: keep aspect ratio */
+    object-fit: cover;   /* can keep cover if you like, or remove if you want strict aspect ratio */
     border: 4px solid #ffc8c8;
     border-radius: 10px;
     cursor: pointer;
@@ -156,3 +174,41 @@ footer nav .social-icons.footer-icons li a {
     text-decoration: none;
     color: inherit;
 }
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+	header {
+	  /* On mobile, stack header items */
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+  
+	header h1 {
+	  font-size: 1.5em;  /* slightly smaller title on mobile if desired */
+	  margin-bottom: 10px;
+	}
+  
+	.header-right {
+	  /* Let the header-right part just follow below the title */
+	  margin-left: 0;
+	}
+  
+	.social-icons li a {
+	  /* Slightly smaller icons on mobile if you wish */
+	  padding: 8px;
+	  font-size: 1.1em;
+	}
+  
+	main {
+	  padding: 20px 10px;
+	}
+  
+	.gallery-section {
+	  gap: 20px; /* reduce gap on smaller devices */
+	}
+  
+	/* Or you can let .gallery-image remain max-width: 100% so it’s fully responsive */
+	.gallery-image {
+	  max-width: 100%;
+	}
+  }
