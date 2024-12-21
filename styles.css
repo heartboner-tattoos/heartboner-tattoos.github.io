@@ -101,20 +101,27 @@ main {
 
 .gallery-section {
     margin-bottom: 60px;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+	display: grid;
+    /* flex-wrap: wrap; */
+	/* Auto-fill columns with a min-width of 300px, or 1fr if there's enough space */
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    justify-content: center;
+    /* justify-content: center; */
+	justify-items: center;
     align-items: center;
 }
 
 .gallery-image {
     /*width: 500px;
     height: 500px;
-    object-fit: cover;*/
 	width: 100%;         /* NEW: full width inside its container */
-    max-width: 500px;    /* NEW: limit max width to 500px if you want */
-    height: auto;        /* NEW: keep aspect ratio */
+    /*max-width: 500px;    /* NEW: limit max width to 500px if you want */
+    /*height: auto;        /* NEW: keep aspect ratio */
+	/* Make each item fill the entire column width */
+	width: 100%;
+	/* Forces each image to be a square (1:1 aspect ratio) */
+	aspect-ratio: 1 / 1;
     object-fit: cover;   /* can keep cover if you like, or remove if you want strict aspect ratio */
     border: 4px solid #ffc8c8;
     border-radius: 10px;
