@@ -101,27 +101,27 @@ main {
 
 .gallery-section {
     margin-bottom: 60px;
-    /* display: flex; */
-	display: grid;
-    /* flex-wrap: wrap; */
+    display: flex;
+	/* display: grid; */
+    flex-wrap: wrap;
 	/* Auto-fill columns with a min-width of 300px, or 1fr if there's enough space */
 	/* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-columns: repeat(3, 1fr); */
     gap: 30px;
-    /* justify-content: center; */
+    justify-content: center;
 	/* justify-items: center; */
-    /* align-items: center; */
-	max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+	/* max-width: 1600px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
 }
 
 .gallery-image {
     /*width: 500px;
     height: 500px;
 	width: 100%;         /* NEW: full width inside its container */
-    /*max-width: 500px;    /* NEW: limit max width to 500px if you want */
-    /*height: auto;        /* NEW: keep aspect ratio */
+    max-width: 500px;    /* NEW: limit max width to 500px if you want */
+    height: auto;        /* NEW: keep aspect ratio
 	/* Make each item fill the entire column width */
 	width: 100%;
 	/* Forces each image to be a square (1:1 aspect ratio) */
@@ -225,15 +225,15 @@ footer nav .social-icons.footer-icons li a {
   }
 
 /* On medium screens (e.g., tablets), reduce to 2 columns */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
 	.gallery-section {
 	  grid-template-columns: repeat(2, 1fr);
 	}
   }
   
-  /* On small screens (phones), reduce to 1 column */
-  @media (max-width: 600px) {
+  /* On small screens (phones), reduce to 1 column
+  /* @media (max-width: 600px) {
 	.gallery-section {
 	  grid-template-columns: 1fr;
 	}
-  }
+  } */
