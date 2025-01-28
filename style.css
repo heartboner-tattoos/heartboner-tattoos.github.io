@@ -37,7 +37,7 @@ img {
 	display:none;
 }
 .scrolltop-btn {
-	width:200px;
+	width:175px;
 	position:fixed;
 	bottom:50px;
 	right:50px;
@@ -46,7 +46,7 @@ img {
 	display:none;
 }
 .scrolltop-btn .st_bottom {
-	margin-top:-135px;
+	margin-top:-119px;
 	transition:0.5s;
 }
 .scrolltop-btn:hover .st_bottom {
@@ -57,6 +57,7 @@ img {
 	position:absolute;
 	bottom:0;
 }
+
 .inline-block {
 	display:inline-block;
 	color:inherit;
@@ -652,10 +653,16 @@ footer small {
 		border-radius:15px;
 	}
 	.scrolltop-btn {
-		width:40px;
+		width:100px;
 		bottom:20px;
 		right:20px;
 	}
+
+	.scrolltop-btn .st_bottom {
+		/* Scale the hidden “slide” distance to match smaller width */
+		margin-top: -68px;
+	  }
+
 	footer .container {
 		padding:20px 30px 15px;
 	}
