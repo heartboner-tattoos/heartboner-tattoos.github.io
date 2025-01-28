@@ -43,44 +43,70 @@ $(function() {
 		
 		// 3) Different positions for mobile vs. desktop
 		if (window.matchMedia('(max-width: 750px)').matches) {
-			// Mobile positions
+			// -- MOBILE POSITIONS --
 			setTimeout(function(){
-			  const angle = getRandomAngle(15, 90);
-			  const pos = getRandomPosition(10, 20);
-			  $(".x-area .area-item.radial01").css({left:'35%',bottom:`${pos}%`,transform: `translate(-50%, 0) rotate(-${angle}deg)`});
+			  const angle = getRandomAngle(35, 50);
+			  const pos = getRandomPosition(15, 30);
+			  $(".x-area .area-item.radial01").css({
+				bottom: `${pos}%`,
+				left: '-2%',
+				transform: `translate(-50%, -50%) rotate(-${angle}deg)`,
+			  });
 			  $(".x-area .area-item.radial01 img").css('width','100%');
 			},80);
 			setTimeout(function(){
-			  const angle = getRandomAngle(15, 90);
-			  const pos = getRandomPosition(10, 20);
-			  $(".x-area .area-item.radial02").css({left:'62%',bottom:`${pos}%`,transform: `translate(-50%, 0) rotate(${angle}deg)`});
+			  const angle = getRandomAngle(35, 50);
+			  const pos = getRandomPosition(80, 100);
+			  $(".x-area .area-item.radial02").css({
+				bottom: `${pos}%`,
+				left: '100%',
+				transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+			  });
 			  $(".x-area .area-item.radial02 img").css('width','100%');
 			},160);
 			setTimeout(function(){
-			  const angle = getRandomAngle(15, 90);
-			  const pos = getRandomPosition(10, 20);
-			  $(".x-area .area-item.radial03").css({left:'22%',bottom:`${pos}%`,transform: `translate(-50%, 0) rotate(-${angle}deg)`});
+			  const angle = getRandomAngle(35, 50);
+			  const pos = getRandomPosition(50, 65);
+			  $(".x-area .area-item.radial03").css({
+				bottom: `${pos}%`,
+				left: '-2%',
+				transform: `translate(-50%, -50%) rotate(-${angle}deg)`,
+			  });
 			  $(".x-area .area-item.radial03 img").css('width','100%');
 			},240);
 			setTimeout(function(){
-			  const angle = getRandomAngle(15, 90);
-			  const pos = getRandomPosition(10, 20);
-			  $(".x-area .area-item.radial04").css({left:'75%',bottom:`${pos}%`,transform: `translate(-50%, 0) rotate(${angle}deg)`});
+			  const angle = getRandomAngle(35, 50);
+			  const pos = getRandomPosition(15, 30);
+			  $(".x-area .area-item.radial04").css({
+				bottom: `${pos}%`,
+				left: '100%',
+				transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+			  });
 			  $(".x-area .area-item.radial04 img").css('width','100%');
 			},320);
 			setTimeout(function(){
-			  const angle = getRandomAngle(15, 90);
-			  const pos = getRandomPosition(10, 20);
-			  $(".x-area .area-item.radial05").css({left:'45%',bottom:`${pos}%`, transform: `translate(-50%, 0) rotate(-${angle}deg)`});
+			  const angle = getRandomAngle(35, 50);
+			  const pos = getRandomPosition(80, 100);
+			  $(".x-area .area-item.radial05").css({
+				bottom: `${pos}%`,
+				left: '-2%',
+				transform: `translate(-50%, -50%) rotate(-${angle}deg)`,
+			  });
 			  $(".x-area .area-item.radial05 img").css('width','100%');
 			},400);
 			setTimeout(function(){
-				const angle = getRandomAngle(15, 90);
-				const pos = getRandomPosition(10, 20);
-				$(".x-area .area-item.radial06").css({left:'69%',bottom:`${pos}%`,transform: `translate(-50%, 0) rotate(${angle}deg)`});
-				$(".x-area .area-item.radial06 img").css('width','100%');
-			  },480);
+			  const angle = getRandomAngle(35, 50);
+			  const pos = getRandomPosition(60, 75);
+			  $(".x-area .area-item.radial06").css({
+				bottom: `${pos}%`,
+				left: '105%',
+				transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+			  });
+			  $(".x-area .area-item.radial06 img").css('width','100%');
+			},480);
+
 		  } else {
+
 			// Desktop positions
 			setTimeout(function(){
 			  const angle = getRandomAngle(15, 90);
