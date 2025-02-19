@@ -95,6 +95,91 @@ body * {
 	text-align:center;
 }
 
+.section-banner {
+	margin-bottom: 0 !important; /* Removes extra margin at the bottom */
+	padding-bottom: 0 !important; /* Removes extra padding if present */
+  }
+  
+  .section-banner + section {
+	margin-top: 0 !important; /* Removes extra space from the next section */
+	padding-top: 0 !important; /* Removes extra padding from the next section */
+  }
+
+.section-banner a:hover {
+	opacity: 1 !important;
+  }
+
+.shop-image {
+	display: block;
+	/* width: 100%; */
+	max-width: 200px;
+	height: auto;
+}
+.shop-link {
+	display: flex; /* Or block, depending on your layout needs */
+	align-items: center; /* Vertically align the image */
+	gap: 1rem;
+	text-decoration: none; /* Remove underline */
+	position: relative;
+}
+  
+.shop-closed {
+	display: inline;
+	max-width: 500px;
+}
+
+  /* Hide the "open" image by default */
+.shop-link .shop-open {
+	display: none;
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+  
+  /* When hovering over the link, hide "closed" and show "open" */
+.shop-link:hover .shop-closed {
+	display: none;
+}
+.shop-link:hover .shop-open {
+	display: inline;
+	max-width: 500px;
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+
+@media screen and (max-width:750px) {
+	.shop-image {
+		display: block;
+		/* width: 100%; */
+		max-width: 200px;
+		height: auto;
+	}
+	.shop-link {
+		display: flex; /* Or block, depending on your layout needs */
+		align-items: center; /* Vertically align the image */
+		gap: 1rem;
+		text-decoration: none; /* Remove underline */
+		position: relative;
+	}
+	  
+	.shop-closed {
+		display: inline;
+		max-width: 400px;
+	}
+	
+	  /* Hide the "open" image by default */
+	.shop-link .shop-open {
+		display: none;
+	}
+	  
+	  /* When hovering over the link, hide "closed" and show "open" */
+	.shop-link:hover .shop-closed {
+		display: none;
+	}
+	.shop-link:hover .shop-open {
+		display: inline;
+		max-width: 400px;
+	}
+}
 
 main {
 	background-color:#FFF4DE;
