@@ -181,6 +181,41 @@ body * {
 	}
 }
 
+@media screen and (max-width:300px) {
+	.shop-image {
+		display: block;
+		/* width: 100%; */
+		max-width: 100px;
+		height: auto;
+	}
+	.shop-link {
+		display: flex; /* Or block, depending on your layout needs */
+		align-items: center; /* Vertically align the image */
+		gap: 1rem;
+		text-decoration: none; /* Remove underline */
+		position: relative;
+	}
+	  
+	.shop-closed {
+		display: inline;
+		max-width: 200px;
+	}
+	
+	  /* Hide the "open" image by default */
+	.shop-link .shop-open {
+		display: none;
+	}
+	  
+	  /* When hovering over the link, hide "closed" and show "open" */
+	.shop-link:hover .shop-closed {
+		display: none;
+	}
+	.shop-link:hover .shop-open {
+		display: inline;
+		max-width: 200px;
+	}
+}
+
 main {
 	background-color:#FFF4DE;
 }
