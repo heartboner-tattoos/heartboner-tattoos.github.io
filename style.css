@@ -93,7 +93,6 @@ body * {
 	letter-spacing:0;
 	line-height:40px;
 	text-align:center;
-	overflow-x: hidden; /* RECOMMENDED: prevents horizontal scroll */	
 }
 
 .section-banner {
@@ -402,6 +401,7 @@ header {
 
 .section01 {
 	margin-top: -100px;
+	overflow-x: hidden;
 }
 
 .section01 .section-title {
@@ -851,11 +851,12 @@ footer small {
 .section_kv{
   width: 100%;
   position: relative;
-	overflow:visible;
+	overflow:hidden;
 }
 .section_kv .floating_parts {
   position: absolute;
   opacity: 0;
+  pointer-events: none;
   /* z-index: 15; */
 	/* animation: floating ease-in-out 10s infinite; */
 }
