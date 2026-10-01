@@ -107,11 +107,14 @@
           <!-- RIGHT SIDE: Social Icons -->
           <div class="sns-container flex-container">
             <!-- Language switch (example link to Japanese page) -->
-            <div class="flex-item language-toggle">
-              <a href="./index.html" lang="en" aria-label="English version">English</a>
-              <span aria-hidden="true"> / </span>
-              <a href="./index-cn.html" lang="zh-CN" aria-label="中文版">中文</a>
-            </div>
+			<details class="language-picker">
+				<summary aria-label="言語を選択">日本語 <span class="language-chevron" aria-hidden="true"></span></summary>
+				<nav class="language-options" aria-label="言語">
+					<a href="./index.html" lang="en" hreflang="en">English</a>
+					<a href="./index-ja.html" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+					<a href="./index-cn.html" lang="zh-CN" hreflang="zh-CN">中文</a>
+				</nav>
+			</details>
 
             <!-- Instagram -->
             <div class="flex-item">
@@ -499,7 +502,7 @@
     <script>
       function toggleMenu() {
         // If on mobile, toggle. If on desktop, do nothing.
-        if (window.innerWidth < 768) {
+		if (window.innerWidth < 1024) {
           const navMenu = document.getElementById('navMenu');
           navMenu.classList.toggle('open');
         }

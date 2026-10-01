@@ -1,3 +1,23 @@
+// Native details keeps language selection usable even without JavaScript.
+document.querySelectorAll('.language-picker').forEach(function (picker) {
+	const summary = picker.querySelector('summary');
+	document.addEventListener('click', function (event) {
+		if (!picker.contains(event.target)) picker.open = false;
+	});
+	picker.addEventListener('keydown', function (event) {
+		if (event.key === 'Escape' && picker.open) {
+			picker.open = false;
+			summary.focus();
+		}
+	});
+	picker.addEventListener('focusout', function (event) {
+		if (!picker.contains(event.relatedTarget)) picker.open = false;
+	});
+	picker.addEventListener('toggle', function () {
+		if (picker.open) document.getElementById('navMenu').classList.remove('open');
+	});
+});
+
 $(function() {
 	// console.log('Script loaded!'); // <--- Add this
 	function getRandomAngle(min, max) {

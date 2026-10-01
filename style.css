@@ -1057,8 +1057,107 @@ html {
 	height: auto;
   }
   
+	/* Compact language selector with touch-friendly language bubbles. */
+	.site-header .sns-container {
+		align-items: center;
+		flex-wrap: nowrap;
+	}
+	.language-picker {
+		position: relative;
+		flex: 0 0 auto;
+		color: #333;
+	}
+	.language-picker summary {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		min-height: 44px;
+		padding: 0 12px;
+		border: 1px solid rgba(51, 51, 51, 0.18);
+		border-radius: 24px;
+		background: #fff4de;
+		font-size: 14px;
+		font-weight: 700;
+		white-space: nowrap;
+		list-style: none;
+		cursor: pointer;
+	}
+	.language-picker summary::-webkit-details-marker {
+		display: none;
+	}
+	.language-chevron {
+		width: 6px;
+		height: 6px;
+		border-right: 2px solid currentColor;
+		border-bottom: 2px solid currentColor;
+		transform: translateY(-2px) rotate(45deg);
+	}
+	.language-picker[open] .language-chevron {
+		transform: translateY(2px) rotate(225deg);
+	}
+	.language-options {
+		position: absolute;
+		top: calc(100% + 8px);
+		left: 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		width: 144px;
+		padding: 8px;
+		border: 1px solid rgba(51, 51, 51, 0.12);
+		border-radius: 24px;
+		background: #fff4de;
+		box-shadow: 0 8px 24px rgba(51, 51, 51, 0.16);
+	}
+	.language-options a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 44px;
+		border-radius: 22px;
+		font-size: 15px;
+		color: #333;
+		background: #fff;
+	}
+	.language-options a[aria-current="page"],
+	.language-options a:hover {
+		background: #f7ad46;
+		font-weight: 700;
+	}
+	.language-picker summary:focus-visible,
+	.language-options a:focus-visible {
+		outline: 2px solid #333;
+		outline-offset: 3px;
+	}
+
   /* ---------- RESPONSIVE (Mobile) ---------- */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
+	.header-inner {
+		padding: 0 8px;
+		gap: 4px;
+	}
+	.site-header .sns-container {
+		gap: 2px;
+	}
+	.site-header .sns-container .flex-item a {
+		width: 44px;
+		height: 44px;
+	}
+	.site-header .sns-container .flex-item a img {
+		width: 28px;
+	}
+	.site-header .sns-container .flex-item i {
+		width: 28px;
+		font-size: 26px;
+	}
+	.nav-left {
+		flex: 0 0 30px;
+	}
+	.hamburger-icon {
+		margin-right: 0;
+	}
 	/* Show hamburger, hide nav by default */
 	.hamburger-icon {
 	  display: inline-block;
@@ -1068,8 +1167,8 @@ html {
 	}
   }
   
-  /* ---------- DESKTOP (>=768px) ---------- */
-  @media screen and (min-width: 768px) {
+  /* ---------- DESKTOP (>=1024px) ---------- */
+  @media screen and (min-width: 1024px) {
 	/* Hide hamburger icon, show nav always */
 	.hamburger-icon {
 	  display: none;
